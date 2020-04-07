@@ -2,7 +2,7 @@ CLASS_NAMES: ['Car', 'Pedestrian', 'Cyclist']
 
 DATA_CONFIG:
     DATASET: 'KittiDataset'
-    DATA_DIR: 'data/kitti'
+    DATA_DIR: 'data/A3D_PCDet'
     FOV_POINTS_ONLY: True
     NUM_POINT_FEATURES: {
         'total': 4,
@@ -13,14 +13,14 @@ DATA_CONFIG:
 
     TRAIN:
         INFO_PATH: [
-            data/kitti/kitti_infos_train.pkl
+            data/A3D_PCDet/kitti_infos_train.pkl
         ]
         SHUFFLE_POINTS: True
         MAX_NUMBER_OF_VOXELS: 16000
 
     TEST:
         INFO_PATH: [
-            data/kitti/kitti_infos_val.pkl
+            data/A3D_PCDet/kitti_infos_val.pkl
         ]
         SHUFFLE_POINTS: False
         MAX_NUMBER_OF_VOXELS: 40000
@@ -37,7 +37,7 @@ DATA_CONFIG:
         DB_SAMPLER:
             ENABLED: True
             DB_INFO_PATH: [
-                data/kitti/kitti_dbinfos_train.pkl
+                data/A3D_PCDet/kitti_dbinfos_train.pkl
             ]
             PREPARE:
                 filter_by_difficulty: [-1]
